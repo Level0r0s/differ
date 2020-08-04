@@ -1,0 +1,36 @@
+[package]
+version = "1.0.1"
+publish = true
+name = "differ"
+authors = [ "Mark Summerfield <mark@qtrac.eu>",]
+edition = "2018"
+include = [ "Cargo.toml", "src/**/*.rs", "examples/**/*.rs",]
+description = "Differ is a library for finding the differences between two sequences."
+documentation = "http://www.qtrac.eu/rs/differ/differ/index.html"
+homepage = "http://www.qtrac.eu/differ.html"
+readme = "README.md"
+keywords = [ "diff", "difference", "compare", "comparison", "changes",]
+categories = [ "development-tools", "text-processing", "development-tools::testing",]
+license = "GPL-3.0-or-later"
+
+[features]
+use_serde = [ "serde", "serde_derive",]
+
+[dependencies]
+fnv = "^1"
+
+[badges.maintenance]
+status = "passively-maintained"
+
+[dependencies.serde]
+version = "^1"
+optional = true
+features = [ "derive",]
+
+[dependencies.serde_derive]
+version = "^1"
+optional = true
+
+[profile.release]
+codegen-units = 1
+lto = true
