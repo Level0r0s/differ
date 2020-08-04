@@ -25,7 +25,7 @@ To use differ, add this line your `Cargo.toml` file's `[dependencies]`
 section:
 
 ```toml,ignore
-differ = "1"
+differ = "1.0.1"
 ```
 
 If you want to be able to serialize or deserialize
@@ -33,7 +33,7 @@ If you want to be able to serialize or deserialize
 [`Tag`](struct.Tag.html)s, then use:
 
 ```toml,ignore
-differ = { version = "1", features = ["use_serde"] }
+differ = { version = "1.0.1", features = ["use_serde"] }
 ```
 
 Then, in your crate root, for Rust 2015 add `extern crate differ`, and for

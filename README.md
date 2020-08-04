@@ -8,14 +8,14 @@ and `Eq` traits.
 
 For your `Cargo.toml` add this to the `[dependencies]` section:
 ```toml
-differ = "1"
+differ = "1.0.1"
 ```
 
 If you want to be able to serialize or deserialize `Match`es, `Span`s, or
 `Tag`s, then use:
 
 ```toml,ignore
-differ = { version = "1", features = ["use_serde"] }
+differ = { version = "1.0.1", features = ["use_serde"] }
 ```
 
 Then, in your crate root, for Rust 2015 add `extern crate differ`, and for
